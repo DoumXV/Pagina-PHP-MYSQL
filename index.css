@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root{
+    --primary-color: #34495E;
+    --background-color: #a3a8ab; 
+    --light-color: #E5E7E9;
+    
+    
+}
+
+body{
+    font-family: 'Poppins',sans-serif;
+    background-color: var(--background-color);
+}
+
+
+
+
+
+/*HEADER -  NAVBAR*/
+
+.tabla-nav{
+    border: 5px solid black; 
+    margin: 10px 90px; 
+    width: 87%;
+    border-radius: .5rem;
+    background-color: var(--primary-color);
+}
+
+#icono-navbar{
+    width: 60px; 
+    margin: 2px 90% 2px 10px; 
+    border:  2px solid black;
+    border-radius: 1rem;
+}
+
+.opcion-navbar{
+    width: 10%;
+    border: 2px solid black;
+    border-radius: .5rem;
+    margin: 0;
+    background-color: var(--light-color);
+}
+
+.opcion-navbar a{   
+    text-decoration: none;
+    color: black;
+}
+
+/*BANNER*/
+
+#banner{
+    width: 86%; 
+    margin: 10px 100px;
+}
+
+/*****MAIN*****/
+/*****MAIN*****/
+
+/*TARJETAS*/
+
+.tarjetas{
+    width: 90%; 
+    margin: 50px 90px auto 80px;
+}
+
+.tarjetas table{
+    margin: 20px 90px;
+}
+
+.tarjetas-img{
+    width: 100%; 
+    border: 2px solid black;
+    background-color: white;
+
+}
+
+#youtube{
+    border: 2px solid black;
+    width: 332px;
+    height: 300px;
+}
+
+.tarjetas-text{
+    padding: 40px 80px 40px 80px;
+}
+
+
+.contenido table{
+    border: 2px solid black; 
+    margin: 20px 90px 0px 100px;
+    background-color: var(--light-color);
+}
+
+.contenido-img{
+    width: 20%;
+}
+
+.contenido-img img{
+    width: 120%; 
+    margin: 10px 20px 10px 50px;
+}
+
+.contenido-text{
+    width: 80%;
+}
+.contenido-text h1{
+    margin: 40px 50% 35px 50%;
+}
+
+.contenido-text p{
+    margin-left: 20%;
+}
+
+/******FOOTER*****/
+
+.footer-contenido{
+    display: flex; 
+    border: 2px solid black; 
+    margin: 60px 90px 0px 100px;
+    background-color: var(--light-color);
+    
+}
+
+.tabla-servicio-cliente{
+    margin: 20px 0px 0px 90px; 
+    width: 30%;
+}
+
+.tabla-servicio-cliente h4{
+    margin-top: 5px;
+}
+
+.tabla-servicio-cliente td{
+    text-align: center;
+}
+
+.tabla-contacto{
+    margin: 20px 80px 0px 0px; 
+    width: 70%;
+}
+
+.tabla-contacto th{
+    width: 20%;
+}
+
+.tabla-contacto td{
+    text-align: center;
+}
+
+.tabla-contacto a{
+    color: black;
+}
+
+.tabla-contacto img{
+    width: 17%;
+}
+ /*COPYRIGHT*/
+ 
+ .footer-copyright{
+    margin-top: 30px;
+ }
+
+ .footer-copyright p{
+    border: 2px solid  black; 
+    color: var(--light-color);
+    padding: 10px;
+    margin: 20px 90px 0px 100px;
+    text-align: center;
+    background-color: var(--primary-color);
+ }
