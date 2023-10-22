@@ -16,6 +16,7 @@ body{
     box-sizing: border-box;
 }
 
+
 /*HEADER*/
 
 .container-header{
@@ -105,141 +106,199 @@ body{
     height: 20rem;
 }
 
+/*MAIN*/
 
-/*NOSOTROS*/
-.container-nosotros{
+.main{
     background-color: var(--light-color);
-    display: flex;
-    align-content: center;
-    justify-content: space-between;
-    margin: 2rem 8rem;
-    border: 2px solid black;
-    border-radius: 1rem;
 }
 
-.content-text{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 65%;
-    padding: 4rem 2rem;
-}
-
-.content-text h2{
-    margin-right: 25rem;
-}
-
-.content-text img{
-    width: 75%;
-    border-radius: 2rem;    
-    border: 2px solid black;
-    margin-top: 2rem;
-}
-
-.content-text p{
-    word-spacing: .1rem;
-    padding-left: 2rem;
-}
-
-.content-images{
-    display: flex;
-    flex-direction: column;
-    width: 35%;
-    padding: 2rem 0rem;
-}
-
-.image-nosotros{
+/**REGISTRO**/
+.container-form {
+    background-color: var(--light-color);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-.image-nosotros img{
-    width: 60%; 
-    border-radius: 2rem;
-    border: 4px solid var(--primary-color);
-}
-
-.image-nosotros p{
-    font-size: small;
+    margin: 2rem 25rem;
     padding: 0 5rem;
-}
-
-/*EQUIPO*/
-
-.container-equipo{
-    background-color: var(--background-color);
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    align-items: center;
-    justify-content: space-between;
-    padding: 4rem 6rem;
-}
-
-.image-equipo{
-    background-color: var(--primary-color);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     border: 2px solid black;
     border-radius: 1rem;
-    margin: 0 2rem;
-}
-
-.image-equipo img{
-    width: 80%;
-    padding: 2rem 0;
-    margin: 0 0;
-}
-
-.image-equipo p{
-    color: var(--light-color);
+  }
+  
+  .title-form {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2rem;
     font-weight: 600;
-    padding: 0 0;text-transform: uppercase;
-}
-
-/*ARTICULO*/
-
-.container-articulo{
+    padding: 2rem;
+  }
+  
+  .name,
+  .treatment,
+  .last-name,
+  .user,
+  .password,
+  .email,
+  .adress {
     display: flex;
-    background-color: var(--background-color);
-    align-items: center;
-    justify-content: center;
-}
-
-.text-articulo{
-    display: flex;
-    background-color: black;
-    padding: 1rem 4rem;
-    margin: auto 4rem;
+    flex-direction: column;
+  }
+  
+  .name input,
+  .treatment select,
+  .form label,
+  .row input,
+  .last-name input,
+  .user input,
+  .password input,
+  .email input,
+  .adress input {
+    font-size: medium;
+    outline: none;
+    background: none;
     border: 2px solid var(--primary-color);
+    cursor: pointer;
     border-radius: 2rem;
-}
-
-.text-articulo i{
-    color: var(--light-color);
-}
-
-/*BOXES*/
-
-.container-boxes{
-    background-color: var(--light-color);
+    padding: .2rem;
+    color: var(--dark-color);
+    display: block;
+    margin: 1rem 0;
+    width: 100%;
+    font-family: "Poppins";
+  }
+  
+  .treatment label,
+  .name label,
+  .interests p,
+  .last-name label,
+  .user label,
+  .password label,
+  .email label,
+  .adress label {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+  
+  .birthday {
+    display: flex;
     justify-content: space-between;
+    margin-bottom: 3rem;
+  }
+  
+  .birthday label {
+    font-size: 1rem;
+    font-weight: 400;
+    padding-right: 3rem;
+  }
+  
+  .birthday input {
+    outline: none;
+    cursor: pointer;
+    border: none;
+    border-bottom: 2px solid var(--primary-color);
+    background-color: var(--light-color);
+  }
+  
+  .gender {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+  }
+  
+  .gender li,
+  .area li {
+    list-style: none;
+  }
+  
+  .gender label {
+    font-size: 1.6rem;
+    font-weight: 400;
+  }
+  
+  .gender input {
+    margin-left: 20rem;
+  }
+  
+  .area {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+  }
+  
+  .area label {
+    font-size: 1.6rem;
+    font-weight: 400;
+  }
+  
+  .register-button {
+    padding: 3rem 0;
+    justify-content: center;
+    display: flex;
     align-items: center;
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(100px,200px));
-    margin: 3rem 8rem;
-    padding: 5rem 5rem;
-    border: 2px solid black;
+  }
+  
+  .register-button button {
+    width: 20rem;
+    border: none;
+    background-color: black;
+    color: white;
+    text-transform: uppercase;
+    padding: 1rem 3rem;
     border-radius: 2rem;
+    font-size: 1.2rem;
+    font-family: inherit;
+    cursor: pointer;
+    font-weight: 600;
+  }
+
+  /*INTERESES*/
+
+.container-intereses{
+    display: flex;
+    padding: 0 3rem;
+    
 }
 
-.box img{
-    width: 180px;
-    height: 180px;
+.container-fila{
+    display: flex;
 }
+
+.container-checkbox{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin-left: 2rem;
+}
+ .container-checkbox input{
+    margin: auto 2rem;
+ }
+
+.container-label{
+    display: flex;
+    flex-direction: column;
+    margin-left: 2rem;
+}
+
+#text-intereses{
+    font-weight: 600;
+}
+
+.container-condiciones{
+    display: flex;
+    margin: 0rem 2rem;
+    margin-top: 1rem;
+}
+
+.container-condiciones p{
+    margin-left: 1rem;
+    margin-top: 1rem;
+}
+
+.container-condiciones a{
+    color: var(--primary-color);
+}
+
+
 
 /*FOOTER*/
 

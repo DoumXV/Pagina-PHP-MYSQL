@@ -1,144 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro</title>
+    <link rel="stylesheet" href="registro.css">
 </head>
+
 <body>
-    <hr>
     <header>
-        <table style="border: 2px solid black; margin: 10px 90px; width: 87%;">
-            <tr style="border: 2px solid black;">
-                <th><img src="img/icono-1.png" alt="Icono" style="width: 60px; margin: 2px 90% 2px 10px; border:  2px solid black;" ></th>
-                <th style="border: 2px solid black; width: 10%; margin: 30px 0px;"><a href="index.html" style="text-decoration: none; color: black;"><h3>Inicio</h3></a></th>
-                <th style="border: 2px solid black; width: 10%; padding: 0;"><a href="login.html" style="text-decoration: none; color: black;"><h3>Login</h3></a></th>
-                <th style="border: 2px solid black; width: 10%; padding: 0;"><a href="registro.html" style="text-decoration: none; color: black;"><h3>Registro</h3></a></th>
-            </tr>   
-        </table>
-        <br>
-        <img src="img/banner.jpeg" alt="" style="width: 86%; margin: 10px 100px;">
+        <div class="container-header">
+            <div class="soporte-cliente">
+                <img src="img/twitter.svg" alt="">
+                <img src="img/instagram.svg" alt="">
+            </div>
+            <div class="container-logo">
+                <img src="img/bangladeshi-taka-sign-solid.svg" alt="">
+                <h1><a href="#">esert</a></h1>
+            </div>
+            <div class="container-user">
+                <a href="login.html"><img src="img/user-solid.svg" alt=""></a>
+                <a href=""><img src="img/heart-solid.svg" alt=""></a>
+                <a href=""><img src="img/basket-shopping-solid.svg" alt=""></a>
+            </div>
+        </div>
+
+        <div class="container-navbar">
+            <nav>
+                <ul class="menu-navbar">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="">Anillos</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="">Brazaletes</a></li>
+                    <li><a href="">Más</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="container-banner">
+
+        </div>
     </header>
     <main>
-        <section style="display: flex; text-align: center; justify-content: center;">
-            <form style="border: 2px solid black; margin: 40px 90px 0 100px;">
-                <table style="padding: 100px; margin: auto 100px 0 20px;">
-                    <tr>
-                        <th></th>
-                        <th></th>
-                    </tr>
-                    <tr>
-                        <td style="padding-top: 10px; text-align: left;"><label style="font-size: 160%;" for="">Nombre:</label></td>
-                        <td style=" padding-top: 10px;"><input style="width: 160%;" type="text"></td>
-                    </tr>
-                    <tr>
-                        <td style="padding-top: 10px; text-align: left;"><label style="font-size: 160%;" for="">Apellido:</label></td>
-                        <td style="padding-top: 10px;"><input style="width: 160%;" type="text"></td>
-                    </tr>
-                    <tr>
-                        <td style="padding-top: 10px; text-align: left;"><label style="font-size: 160%;" for="">Usuario:</label></td>
-                        <td style="padding-top: 10px;"><input style="width: 160%;" type="text"></td>
-                    </tr>
-                    <tr>
-                        <td style="padding-top: 10px; text-align: left;"><label style="font-size: 160%;" for="">Contraseña:</label></td>
-                        <td style="padding-top: 10px;"><input style="width: 160%;" type="password"></td>
-                    </tr>
-                    <tr>
-                        <td style="padding-top: 10px; text-align: left;"><label style="font-size: 160%;" for="">Email:</label></td>
-                        <td style="padding-top: 10px;"><input style="width: 160%;" type="email"></td>
-                    </tr>
-                    <tr>
-                        <td style="padding-top: 10px; text-align: left;"><label style="font-size: 160%;" for="">Direccion:</label></td>
-                        <td style=" padding-top: 10px;"><input style="width: 160%;" type="text"></td>
-                    </tr>
-                    <tr>
-                        <td style="padding-top: 10px; text-align: left;"><label style="font-size: 160%;" for="">Fecha de Nacimiento:</label></td>
-                        <td><input type="date" name="" id=""></td>
-                    </tr>
-                    <tr>
-                        <td style="padding-top: 10px; text-align: left;"><label style="font-size: 160%;" for="">Edad:</label></td>
-                        <td><input type="number" name="" id=""></td>
-                    </tr>
-                    <tr>
-                        <td style="padding-top: 10px; text-align: left;"><label style="font-size: 160%;" for="">Sexo:</label></td>
-                        <td style="text-align: left;">
-                            <ul style="list-style: none;">
-                                <li style="padding-top: 10px;"><input type="radio" name="sexo" id="masculino">
-                                    <label for="masculino">Masculino</label>
-                                </li>
-                                <li style="padding-top: 10px;"><input type="radio" name="sexo" id="masculino">
-                                    <label for="masculino">Femenino</label>
-                                </li>
-                                <li style="padding-top: 10px;"><input type="radio" name="sexo" id="masculino">
-                                    <label for="masculino">Otros</label>
-                                </li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="padding-top: 10px; text-align: left;"><label style="font-size: 160%;" for="">Area de Interes:</label></td>
-                        <td style="text-align: left;">
-                            <ul style="list-style: none;">
-                                <li style="padding-top: 10px;"><input type="checkbox" name="area" id="masculino">
-                                    <label for="masculino">Joyas</label>
-                                </li>
-                                <li style="padding-top: 10px;"><input type="checkbox" name="area" id="masculino">
-                                    <label for="masculino">Relojes</label>
-                                </li>
-                                <li style="padding-top: 10px;"><input type="checkbox" name="area" id="masculino">
-                                    <label for="masculino">Perfumes</label>
-                                </li>
-                                <li style="padding-top: 10px;"><input type="checkbox" name="area" id="masculino">
-                                    <label for="masculino">Gafas</label>
-                                </li>
-                            </ul>
-                        </td>
-                    </tr>
-                </table>
-                <button style="font-size: 120%; padding: 8px 40px; margin: 0 auto 100px auto;">Registrar</button>
+        <div class="container-form">
+            <h1 class="title-form">Registro</h1>
+            <form class=".form">
+                <div class="treatment">
+                    <label for="treatment">Tratamiento *</label>
+                    <select id="treatment">
+                        <option selected>Sra.</option>
+                        <option value="1">Sr.</option>
+                        <option value="2">Otro</option>
+                        <option value="3">Prefiero No Especificarlo</option>
+                    </select>
+                </div>
+
+                <div class="name">
+                    <label for="">Nombres *</label>
+                    <input type="text">
+                </div>
+                <div class="last-name">
+                    <label for="">Apellidos *</label>
+                    <input type="text">
+                </div>
+                <div class="user">
+                    <label for="">Usuario *</label>
+                    <input type="text">
+                </div>
+                <div class="password">
+                    <label for="">Contraseña *</label>
+                    <input type="password">
+                </div>
+                <div class="email">
+                    <label for="">Email *</label>
+                    <input type="email">
+                </div>
+                <div class="adress">
+                    <label for="">Direccion *</label>
+                    <input type="text">
+                </div>
+                <div class="birthday">
+                    <label for="">Fecha de Nacimiento *</label>
+                    <input type="date">
+                </div>
+                <p id="text-intereses">Por favor, seleccione uno o más intereses</p>
+
+                <div class="container-intereses">
+                    <div class="container-fila">
+                        <div class="container-checkbox">
+                            <input type="checkbox" value="" id="joyas">
+                            <input type="checkbox" value="" id="relojes">
+                            <input type="checkbox" value="" id="bolsos">
+                        </div>
+                        <div class="container-label">
+                            <label for="joyas">Joyas</label>
+                            <label for="relojes">Relojes</label>
+                            <label for="bolsos">Bolsos</label>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="container-fila">
+                            <div class="container-checkbox">
+                                <input type="checkbox" value="" id="perfume">
+                                <input type="checkbox" value="" id="hoteles">
+                                <input type="checkbox" value="" id="todos">
+                            </div>
+                            <div class="container-label">
+                                <label for="perfume">Perfumes</label>
+                                <label for="hoteles">Hoteles</label>
+                                <label for="todos">Todos</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container-condiciones">
+                    <input type="checkbox" value="" id="todos">
+                    <p>
+                        Tras haber leido y entendido la
+                        <a href="#">Politica de privacidad</a>
+                        declaro ser una persona mayor de 16 años
+                    </p>
+                </div>
+
+                <div class="register-button">
+                    <button>Registrar</button>
+                </div>
             </form>
-        </section>
+        </div>
     </main>
     <footer>
-        <section style="display: flex; border: 2px solid black; margin: 60px 90px 0px 100px;">
-            <table style="margin: 20px 0px 0px 90px; width: 30%;">
-                <tr>
-                    <th><h4 style="margin-top: 0px;">Servicio Al Cliente</h4></th>
-                </tr>
-                <tr>
-                    <td style="text-align: center;">    
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime tempore at ratione cumque nam? At, repellendus pariatur consequatur ullam nulla sunt. Tenetur facere saepe similique quo, voluptas impedit veniam autem.</p>
-                    </td>
-                </tr>
-            </table>
-            <table style="margin: 20px 80px 0px 0px; width: 70%;">
-                <tr>
-                    <th style="width: 20%;">Contacto</th>
-                    <th style="width: 20%;">Privacidad</th>
-                    <th style="width: 20%;">Redes Sociales</th>
-                </tr>
-                <tr>
-                    <td style="text-align: center;"><a href="#" style="color: black;">Correo Electronico</a></td>
-                    <td style="text-align: center;"><a href="#" style="color: black;">Politica de Cookies</a></td>
-                    <td style="text-align: center;"><a href="#" style="color: black;"><img src="img/facebook.png" alt="Twitter" style="width: 17%;"></a></td>
-                </tr>
-                <tr>
-                    <td style="text-align: center;"><a href="#" style="color: black;">Cita Virtual</a></td>
-                    <td style="text-align: center;"><a href="#" style="color: black;">Terminos y Condiciones</a></td>
-                    <td style="text-align: center;"><a href="#" style="color: black;"><img src="img/instagram.png" alt="Twitter" style="width: 16%;"></a></td>
-                </tr>
-                <tr>
-                    <td style="text-align: center;"><a href="#" style="color: black;">Llamenos</a></td>
-                    <td style="text-align: center;"><a href="#" style="color: black;">Politica </a></td>
-                    <td style="text-align: center;"><a href="#" style="color: black;"><img src="img/gorjeo.png" alt="Twitter" style="width: 17%;"></a></td>
-                </tr>
-            </table>
-        </section>
-        <section style="margin-top: 30px;">
-            <p style="border: 2px solid  black; padding: 20px;
-                    margin: 20px 90px 0px 100px;
-                    text-align: center;">&copy;2023 Doublas Galleguillos</p>
-        </section>
+        <div class="container-footer">
+            <div class="newsletter">
+                <h4>Newsletter</h4>
+                <p>Suscríbete en nuestro Newsletter y se el primero en enterarte de ofertas y novedades.</p>
+                <input type="email" placeholder="Correo Electronico">
+                <button>Suscribirse</button>
+            </div>
+            <div class="acerca">
+                <h4>Acerca de Nosotros</h4>
+                <ul>
+                    <li><a href="">Terminos y Condiciones</a></li>
+                    <li><a href="">Politica de Privacidad</a></li>
+                    <li><a href="">Informaciones Varias</a></li>
+                    <li><a href="">Informacion de Contacto</a></li>
+                </ul>
+            </div>
+            <div class="mapa">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3036.023629643002!2d-3.6920712739872252!3d40.45261397143391!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4228e23705d39f%3A0xa8fff6d26e2b1988!2sEstadio%20Santiago%20Bernab%C3%A9u!5e0!3m2!1ses!2scl!4v1697844284262!5m2!1ses!2scl"
+                    width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        <div class="copyright">
+            <img src="img/payment.png" alt="">
+            <p>&copy;2023 Doublas Galleguillos</p>
+        </div>
     </footer>
 </body>
+
 </html>

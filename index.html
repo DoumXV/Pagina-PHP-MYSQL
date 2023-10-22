@@ -8,16 +8,37 @@
 </head>
 <body>
     <header>
-        <table class="tabla-nav">
-            <tr>
-                <th><img id="icono-navbar" src="img/icono-1.png" alt="Icono"></th>
-                <th class="opcion-navbar"><a href="index.html"><h3>Inicio</h3></a></th>
-                <th class="opcion-navbar"><a href="login.html"><h3>Login</h3></a></th>
-                <th class="opcion-navbar"><a href="registro.html"><h3>Registro</h3></a></th>
-            </tr>   
-        </table>
-        <br>
-        <img id="banner" src="img/banner.jpeg" alt="banner">
+        <div class="container-header">
+            <div class="soporte-cliente">
+                <img src="img/twitter.svg" alt="">
+                <img src="img/instagram.svg" alt="">
+            </div>
+            <div class="container-logo">
+                <img src="img/bangladeshi-taka-sign-solid.svg" alt="">
+                <h1><a href="#">esert</a></h1>
+            </div>
+            <div class="container-user">
+                <a href="login.html"><img src="img/user-solid.svg" alt=""></a>
+                <a href=""><img src="img/heart-solid.svg" alt=""></a>
+                <a href=""><img src="img/basket-shopping-solid.svg" alt=""></a>
+            </div>
+        </div>
+        
+        <div class="container-navbar">
+            <nav>
+                <ul class="menu-navbar">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="">Anillos</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="">Brazaletes</a></li>
+                    <li><a href="">Más</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="container-banner">
+            
+        </div>
     </header>
 
     <main>
@@ -29,9 +50,9 @@
                     <th><img class="tarjetas-img" src="img/anillo-2.jpg" alt="anillo-2"></th>
                 </tr>
                 <tr>
-                    <td><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero reprehenderit voluptatum officia numquam reiciendis ad! Quisquam voluptatem reprehenderit saepe quasi cum ipsa porro, quibusdam dolores magni expedita, eligendi perspiciatis sapiente.</p></td>
-                    <td><p class="tarjetas-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero reprehenderit voluptatum officia numquam reiciendis ad! Quisquam voluptatem reprehenderit saepe quasi cum ipsa porro, quibusdam dolores magni expedita, eligendi perspiciatis sapiente.</p></td>
-                    <td><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero reprehenderit voluptatum officia numquam reiciendis ad! Quisquam voluptatem reprehenderit saepe quasi cum ipsa porro, quibusdam dolores magni expedita, eligendi perspiciatis sapiente.</p></td>
+                    <td><p>Este impresionante anillo de compromiso es una verdadera obra maestra de la joyería. Con un diamante central de corte brillante de 1 quilate, este anillo irradia un brillo celestial que captura la luz de una manera deslumbrante. </p></td>
+                    <td><p class="tarjetas-text">Este anillo deslumbra con su esmeralda central de corte esmeralda, una piedra preciosa de intensa belleza. La esmeralda está rodeada por un halo de diamantes, resaltando su vibrante color verde profundo.</p></td>
+                    <td><p>Este hermoso anillo de ópalo es una pieza de joyería que evoca la magia y el misterio de las noches estrelladas. El ópalo central, con su juego de colores espectrales y su forma ovalada, es verdaderamente hipnotizante.</p></td>
                 </tr>
             </table>
         </section>
@@ -54,43 +75,31 @@
     </main>
     
     <footer>
-        <section class="footer-contenido">
-            <table class="tabla-servicio-cliente">
-                <tr>
-                    <th><h4>Servicio Al Cliente</h4></th>
-                </tr>
-                <tr>
-                    <td>    
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime tempore at ratione cumque nam? At, repellendus pariatur consequatur ullam nulla sunt. Tenetur facere saepe similique quo, voluptas impedit veniam autem.</p>
-                    </td>
-                </tr>
-            </table>
-            <table class="tabla-contacto">
-                <tr>
-                    <th>Contacto</th>
-                    <th>Privacidad</th>
-                    <th>Redes Sociales</th>
-                </tr>
-                <tr>
-                    <td><a href="#">Correo Electronico</a></td>
-                    <td><a href="#">Politica de Cookies</a></td>
-                    <td><a href="#"><img src="img/facebook.png" alt="Twitter"></a></td>
-                </tr>
-                <tr>
-                    <td><a href="#">Cita Virtual</a></td>
-                    <td><a href="#">Terminos y Condiciones</a></td>
-                    <td><a href="#"><img src="img/instagram.png" alt="Twitter"></a></td>
-                </tr>
-                <tr>
-                    <td><a href="#">Llamenos</a></td>
-                    <td><a href="#">Politica </a></td>
-                    <td><a href="#"><img src="img/gorjeo.png" alt="Twitter"></a></td>
-                </tr>
-            </table>
-        </section>
-        <section class="footer-copyright">
+        <div class="container-footer">
+            <div class="newsletter">
+                <h4>Newsletter</h4>
+                <p>Suscríbete en nuestro Newsletter y se el primero en enterarte de ofertas y novedades.</p>
+                <input type="email" placeholder="Correo Electronico">
+                <button>Suscribirse</button>
+            </div>
+            <div class="acerca">
+                <h4>Acerca de Nosotros</h4>
+                <ul>
+                    <li><a href="">Terminos y Condiciones</a></li>
+                    <li><a href="">Politica de Privacidad</a></li>
+                    <li><a href="">Informaciones Varias</a></li>
+                    <li><a href="">Informacion de Contacto</a></li>
+                </ul>
+            </div>
+            <div class="mapa">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3036.023629643002!2d-3.6920712739872252!3d40.45261397143391!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4228e23705d39f%3A0xa8fff6d26e2b1988!2sEstadio%20Santiago%20Bernab%C3%A9u!5e0!3m2!1ses!2scl!4v1697844284262!5m2!1ses!2scl" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        <div class="copyright">
+            <img src="img/payment.png" alt="">
             <p>&copy;2023 Doublas Galleguillos</p>
-        </section>
+        </div>
+    
     </footer>
 </body>
 </html>
