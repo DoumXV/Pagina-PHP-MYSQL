@@ -96,73 +96,198 @@ body{
     text-transform: uppercase;
 }
 
-/*Baner*/
-
-.container-banner{
-    display: flex;
-    background-image: url(img/banner.jpeg);
-    background-size: cover;
-    background-position: center;
-    height: 20rem;
-}
 
 
 /*****MAIN*****/
 
-/*TARJETAS*/
-
-.tarjetas{
-    width: 90%; 
-    margin: 50px 90px auto 80px;
-}
-
-.tarjetas table{
-    margin: 20px 90px;
-}
-
-.tarjetas-img{
-    width: 100%; 
-    border: 2px solid black;
+.main{
     background-color: white;
+    padding-bottom: 2rem;
+}
+
+/*CARD-TOP*/
+
+.container-top{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.card-top{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+.card-top img{
+    width: 90%;
+    margin: 2rem 2rem;
+}
+
+.card-top p{
+    font-size: 2rem;
+    font-weight: 200;
+    padding: 0 0;
+    margin: 0 0 2rem 0;
+}
+
+.card-top a{
+    font-weight: 100;
+    font-size: .9rem;
+    padding-bottom: 2rem;
+    text-transform: uppercase;
+    color: black;
+}
+
+#diamante{
+    margin-left: 1rem;
+    font-size: 1.8rem;
+}
+
+/*SIMBOLO CARTERA*/
+
+.container-simbolo{
+    display: flex;
+    margin: 2rem 5rem;
+}
+
+.simbolo-img{
+    display: flex;
+}
+
+.simbolo-img img{
+    width: 100%;
+}
+
+.simbolo-text{
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.simbolo-text h3{
+    text-transform: uppercase;
+    margin-top: 7rem;
+    font-size: large;
+    word-spacing: 1px;
+    letter-spacing: 2px;
+}
+
+.simbolo-text p{
+    text-align: left;
+    padding: 0rem 6rem;
+    font-size: .9rem;
+}
+
+/*SERVICIOS*/
+
+.container-servicios{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-servicios h1{
+    font-size: 1.6rem;
+    font-weight: 200;
+    text-transform: uppercase;
+    padding-top: 2rem;
 
 }
 
-#youtube{
-    border: 2px solid black;
-    width: 332px;
-    height: 300px;
+.container-servicios-box{
+    display: flex;
+    justify-content: center;
 }
 
-.tarjetas-text{
-    padding: 40px 80px 40px 80px;
+.servicios-box{
+    display: flex;
+    align-items: center;
+    margin: 2rem 2rem;
 }
 
+.servicios-box img{
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+}
 
-.contenido table{
-    border: 2px solid black; 
-    margin: 20px 90px 40px 100px;
+.servicios-box p{
+    text-align: center;
+}
+
+/*INSTAGRAM*/
+
+.container-instagram{
+    display: flex;
     background-color: var(--light-color);
+    padding: 2rem 4rem;
+    margin-bottom: 0;
 }
 
-.contenido-img{
-    width: 20%;
+.instagram-images{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-content: center;
+    align-items: center;
 }
 
-.contenido-img img{
-    width: 120%; 
-    margin: 10px 20px 10px 50px;
-}
-
-.contenido-text{
+.instagram-images img{
     width: 80%;
 }
-.contenido-text h1{
-    margin: 40px 50% 35px 50%;
+
+.instagram-text{
+    display: flex;
+    width: 1200px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.contenido-text p{
-    margin-left: 20%;
+.instagram-text button{
+    border: 2px solid black;
+    border-radius: .5rem;
+    padding: 1rem 1rem;
+    margin-top: 1rem;
 }
+
+.instagram-text button:hover{
+    background-color: black;
+    color: white;
+}
+
+/*IMAGEN FADE*/
+.img-fade{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-fade img{
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    padding: 2rem 10rem;
+}
+
+.img-fade img:hover{
+    width: 60%;
+    padding: 2rem 10rem;
+    animation: fadeIn 2s ease;
+}
+ 
+@keyframes fadeIn{
+    0%{opacity: 0;
+        filter: blur(20px);
+    }
+    10%{
+        opacity: 1;
+        filter: brightness(2) blur(10px);
+    }
+}
+
 
 /*FOOTER*/
 
