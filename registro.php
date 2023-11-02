@@ -57,7 +57,7 @@
                                     </div>
                                     <div class="form-register">
                                         <p>¿No tienes Cuenta?</p>
-                                        <a href="registro.html">Registrate Aqui</a>
+                                        <a href="registro.php">Registrate Aqui</a>
                                     </div>
             
                                 </form>
@@ -80,10 +80,10 @@
                   <div class="collapse navbar-collapse align-items-center " id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto pb-md-2">
                       <li class="nav-item">
-                        <a class="navbar-brand" href="index.html">Inicio</a>
+                        <a class="navbar-brand" href="index.php">Inicio</a>
                       </li>
                       <li class="nav-item">
-                        <a class="navbar-brand" href="nosotros.html">Nosotros</a>
+                        <a class="navbar-brand" href="nosotros.php">Nosotros</a>
                       </li>
                       <li class="nav-item">
                         <a class="navbar-brand" href="#">Anillos</a>

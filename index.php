@@ -1,3 +1,14 @@
+<?php
+include("conexion.php");
+$con=conectar();
+
+?>
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,12 +45,12 @@
                             <button type="button" class="btn-close float-end" data-bs-dismiss="modal" aria-label="Close"></button>
                             <h1 class="title-form">Iniciar Sesión</h1>
                             <div class="form-content">
-                                <form>
+                                <form action="" method="post">
                                     <div class="form-inputs">
                                         <p class="text-form">Correo Electronico</p>
-                                        <input type="email">
+                                        <input type="email" name="email">
                                         <p class="text-form">Contraseña</p>
-                                        <input type="password">
+                                        <input type="password" name="password">
                                     </div>
                                     <div class="form-options">
                                         <div class="remember-me">
@@ -51,7 +62,7 @@
                                         </div>
                                     </div>
                                     <div class="form-button">
-                                        <button>Iniciar Sesión</button>
+                                        <input type="submit" class="btn btn-primary" name="bntiniciar" value="Iniciar Sesion">
                                     </div>
                                     <div class="form-register">
                                         <p>¿No tienes Cuenta?</p>

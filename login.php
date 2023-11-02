@@ -18,7 +18,7 @@
                 <h1><a href="#">esert</a></h1>
             </div>
             <div class="container-user">
-                <a href="login.html"><img src="img/user-solid.svg" alt=""></a>
+                <a href="login.php"><img src="img/user-solid.svg" alt=""></a>
                 <a href=""><img src="img/heart-solid.svg" alt=""></a>
                 <a href=""><img src="img/basket-shopping-solid.svg" alt=""></a>
             </div>
@@ -27,9 +27,9 @@
         <div class="container-navbar">
             <nav>
                 <ul class="menu-navbar">
-                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="index.php">Inicio</a></li>
                     <li><a href="">Anillos</a></li>
-                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="nosotros.php">Nosotros</a></li>
                     <li><a href="">Brazaletes</a></li>
                     <li><a href="">Más</a></li>
                 </ul>
@@ -66,7 +66,7 @@
                         </div>
                         <div class="form-register">
                             <p>¿No tienes Cuenta?</p>
-                            <a href="registro.html">Registrate Aqui</a>
+                            <a href="registro.php">Registrate Aqui</a>
                         </div>
 
                     </form>
