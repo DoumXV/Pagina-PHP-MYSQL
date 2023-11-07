@@ -9,11 +9,6 @@
 </head>
 <body>
     <header>
-    <?php
-    include("conexion.php");
-    include("controlador.php");
-    ?>
-
         <div class="contenedor-header">
             <div class="soporte-cliente">
                 <img src="img/twitter.svg" alt="">
@@ -33,14 +28,16 @@
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
             <div class="modal-content">
-                <div class="modal-body">
+                <div class="modal-body text-black">
                     <section class="container-login">
                         <div class="form">
                             <button type="button" class="btn-close float-end" data-bs-dismiss="modal" aria-label="Close"></button>
                             <h1 class="title-form">Iniciar Sesión</h1>
                             <div class="form-content">
-                              
-                                <form action="controlador.php" method="post">
+                              <?php 
+                              include "controlador.php" 
+                              ?>
+                                <form action="" method="POST">
                                     <div class="form-inputs">
                                       <p class="text-form">Correo Electronico</p>
                                       <input type="email" name="email">
@@ -57,7 +54,7 @@
                                         </div>
                                     </div>
                                     <div class="form-button">
-                                        <input type="button" class="btn btn-primary" name="bntiniciar" value="Iniciar Sesion">
+                                        <input type="submit" class="btn btn-primary" name="btniniciar" value="Iniciar Sesion">
                                     </div>
                                     <div class="form-register">
                                         <p>¿No tienes Cuenta?</p>
