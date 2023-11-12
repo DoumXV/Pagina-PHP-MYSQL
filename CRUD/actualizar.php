@@ -1,13 +1,8 @@
 <?php
-include("conexion.php");
-$con=conectar();
-
-$id=$_GET['id'];
-
-$sql="SELECT * FROM users WHERE id='$id'";
-$query=mysqli_query($con,$sql);
-
-$row=mysqli_fetch_array($query);
+    include("conexion_nueva.php");
+    $id=$_GET['id'];
+    $row=$conexion->query("SELECT * FROM usuarios WHERE id='$id'");
+    $sql = $row->fetch_object()
 ?>
 
 <!DOCTYPE html>
@@ -17,22 +12,23 @@ $row=mysqli_fetch_array($query);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Actualizar</title>
     <link rel="stylesheet" href="actualizar.css">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
 </head>
 <body>
 <header>
         <div class="contenedor-header">
             <div class="soporte-cliente">
-                <img src="img/twitter.svg" alt="">
-                <img src="img/instagram.svg" alt="">
+                <img src="../img/twitter.svg" alt="">
+                <img src="../img/instagram.svg" alt="">
             </div>
             <div class="contenedor-logo">
-                <img src="img/bangladeshi-taka-sign-solid.svg" alt="">
+                <img src="../img/bangladeshi-taka-sign-solid.svg" alt="">
                 <h1 class="fw-bolder"><a href="#">Admin</a></h1>
             </div>
             <div class="contenedor-user">
-                <a href="#"><img src="img/user-solid.svg" data-bs-toggle="modal" data-bs-target="#exampleModal" alt=""></a>
-                <a href=""><img src="img/heart-solid.svg" alt=""></a>
-                <a href=""><img src="img/basket-shopping-solid.svg" alt=""></a>
+                <a href="#"><img src="../img/user-solid.svg" data-bs-toggle="modal" data-bs-target="#exampleModal" alt=""></a>
+                <a href=""><img src="../img/heart-solid.svg" alt=""></a>
+                <a href=""><img src="../img/basket-shopping-solid.svg" alt=""></a>
             </div>
 
         
@@ -111,14 +107,27 @@ $row=mysqli_fetch_array($query);
 
     <div class="container mt-5">
         <form action="update.php" method="post">
-            <input type="hidden" name="id" value="<?php echo $row['id'] ?>">
-            <input type="text" class="form-control mb-3" name="name" placeholder="Nombre" value="<?php echo $row['name']?>">
-            <input type="text" class="form-control mb-3" name="lastname" placeholder="Apellido" value="<?php echo $row['lastname']?>">
-            <input type="text" class="form-control mb-3" name="user" placeholder="Usuario" value="<?php echo $row['user']?>">
-            <input type="text" class="form-control mb-3" name="email" placeholder="Email" value="<?php echo $row['email']?>">
-            <input type="text" class="form-control mb-3" name="password" placeholder="Contraseña" value="<?php echo $row['password']?>">
+            <input type="hidden" name="id" value="<?php echo $sql->id?>">
+            <div class="ad">
+                    <label for="treatment">Tratamiento *</label>
+                    <select id="treatment" type="text" class="form-control mb-3" name="treatment" value="<?php echo $sql->treatment?>">
+                        <option selected>Sra.</option>
+                        <option value="Sr.">Sr.</option>
+                        <option value="Otro">Otro</option>
+                        <option value="">Prefiero No Especificarlo</option>
+                    </select>
+              </div>
+            <input type="text" class="form-control mb-3" name="name" placeholder="Nombre" value="<?php echo $sql->name?>">
+            <input type="text" class="form-control mb-3" name="lastname" placeholder="Nombre" value="<?php echo $sql->lastname?>">
+            <input type="text" class="form-control mb-3" name="user" placeholder="Nombre" value="<?php echo $sql->user?>">
+            <input type="email" class="form-control mb-3" name="email" placeholder="Nombre" value="<?php echo $sql->email?>">
+            <input type="text" class="form-control mb-3" name="password" placeholder="Nombre" value="<?php echo $sql->password?>">
+            <input type="text" class="form-control mb-3" name="adress" placeholder="Nombre" value="<?php echo $sql->adress?>">
+            <input type="date" class="form-control mb-3" name="birthday" placeholder="Nombre" value="<?php echo $sql->birthday?>">
+
+
             <div class="contenedor-user2">
-                <a href="joyeria.php"><img  src="img/arrow-right-from-bracket-solid.svg" alt=""></a>
+                <a href="joyeria.php"><img  src="../img/arrow-right-from-bracket-solid.svg" alt=""></a>
                 <input type="submit" class="btn btn-primary btn-block" value="Actualizar">
             </div>
             
@@ -176,11 +185,11 @@ $row=mysqli_fetch_array($query);
             </div>
         </div>
         <div class="copyright">
-            <img src="img/payment.png" alt="">
+            <img src="../img/payment.png" alt="">
             <p>&copy;2023 Doublas Galleguillos</p>
         </div>
     
     </footer>
-    <script src="bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="../bootstrap/js/bootstrap.bundle.js"></script>
 </body> 
 </html>

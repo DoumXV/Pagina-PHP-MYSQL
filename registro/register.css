@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
-@import url(bootstrap/css/bootstrap.css);
 :root {
   --primary-color: #345576;
   --background-color: #a3a8ab;
@@ -8,7 +7,7 @@
 
 body {
   font-family: "Poppin", sans-serif;
-  background-color: #E5E7E9;
+  background-color: white;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -22,6 +21,7 @@ body {
   justify-content: space-between;
   padding: 0 3rem;
   color: #E5E7E9;
+  border-bottom: 1px solid #a3a8ab;
 }
 
 .soporte-cliente {
@@ -70,15 +70,7 @@ body {
 .contenedor-navbar {
   display: grid;
   background-color: #E5E7E9;
-  background: linear-gradient(#345576, #E5E7E9);
   border-bottom: 1px solid #a3a8ab;
-}
-
-.contenedor-navbar2 {
-  display: grid;
-  background-color: #E5E7E9;
-  background: linear-gradient(#E5E7E9, #345576);
-  border-top: 1px solid #a3a8ab;
 }
 
 .menu-navbar {
@@ -102,6 +94,191 @@ body {
 .main {
   background-color: white;
   padding-bottom: 2rem;
+}
+
+/**REGISTRO**/
+.container-form {
+  background-color: var(--light-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 25rem;
+  padding: 0 5rem;
+  border: 2px solid black;
+  border-radius: 1rem;
+}
+
+.title-form {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 2rem;
+}
+
+.name,
+.treatment,
+.last-name,
+.user,
+.password,
+.email,
+.adress {
+  display: flex;
+  flex-direction: column;
+}
+
+.name input,
+.treatment select,
+.form label,
+.row input,
+.last-name input,
+.user input,
+.password input,
+.email input,
+.adress input {
+  font-size: medium;
+  outline: none;
+  background: none;
+  border: 2px solid var(--primary-color);
+  cursor: pointer;
+  border-radius: 2rem;
+  padding: 0.2rem;
+  color: var(--dark-color);
+  display: block;
+  margin: 1rem 0;
+  width: 100%;
+  font-family: "Poppins";
+}
+
+.treatment label,
+.name label,
+.interests p,
+.last-name label,
+.user label,
+.password label,
+.email label,
+.adress label {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.birthday {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+
+.birthday label {
+  font-size: 1rem;
+  font-weight: 400;
+  padding-right: 3rem;
+}
+
+.birthday input {
+  outline: none;
+  cursor: pointer;
+  border: none;
+  border-bottom: 2px solid var(--primary-color);
+  background-color: var(--light-color);
+}
+
+.gender {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+
+.gender li,
+.area li {
+  list-style: none;
+}
+
+.gender label {
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.gender input {
+  margin-left: 20rem;
+}
+
+.area {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+
+.area label {
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.register-button {
+  padding: 3rem 0;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.register-button button {
+  width: 20rem;
+  border: none;
+  background-color: black;
+  color: white;
+  text-transform: uppercase;
+  padding: 1rem 3rem;
+  border-radius: 2rem;
+  font-size: 1.2rem;
+  font-family: inherit;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/*INTERESES*/
+.container-intereses {
+  display: flex;
+  padding: 0 3rem;
+}
+
+.container-fila {
+  display: flex;
+}
+
+.container-checkbox {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin-left: 2rem;
+}
+
+.container-checkbox input {
+  margin: auto 2rem;
+}
+
+.container-label {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2rem;
+}
+
+#text-intereses {
+  font-weight: 600;
+}
+
+.container-condiciones {
+  display: flex;
+  margin: 0rem 2rem;
+  margin-top: 1rem;
+}
+
+.container-condiciones p {
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+
+.container-condiciones a {
+  color: var(--primary-color);
 }
 
 /*FOOTER*/
@@ -312,8 +489,4 @@ body {
   font-weight: 400;
   text-decoration: underline;
   color: var(--background-color);
-}
-
-.fondos {
-  background-color: #345576;
-}/*# sourceMappingURL=joyeria.css.map */
+}/*# sourceMappingURL=register.css.map */

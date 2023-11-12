@@ -6,24 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Joyeria</title>
     <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
 </head>
+<script type="text/javascript">
+  function ConfirmCloseSesion()
+  {
+    var respuesta = confirm("Estas seguro que desea Cerrar Sesión?");
+    if(respuesta==true)
+    {
+      return true
+    }else{
+      return false
+    }
+  }
+</script>
+
 <body>
     <header>
+    <?php 
+      include "../CRUD/conexion_nueva.php";
+      include "../CRUD/controlador.php";
+    ?>
         <div class="contenedor-header">
             <div class="soporte-cliente">
-                <img src="img/twitter.svg" alt="">
-                <img src="img/instagram.svg" alt="">
+                <img src="../img/twitter.svg" alt="">
+                <img src="../img/instagram.svg" alt="">
             </div>
             <div class="contenedor-logo">
-                <img src="img/bangladeshi-taka-sign-solid.svg" alt="">
+                <img src="../img/bangladeshi-taka-sign-solid.svg" alt="">
                 <h1 class="fw-bolder"><a href="#">esert</a></h1>
             </div>
             <div class="contenedor-user">
-                <a href="#"><img src="img/user-solid.svg" data-bs-toggle="modal" data-bs-target="#exampleModal" alt=""></a>
-                <a href=""><img src="img/heart-solid.svg" alt=""></a>
-                <a href=""><img src="img/basket-shopping-solid.svg" alt=""></a>
+                <?php
+                if(!empty($_SESSION["id"])){
+                  echo $_SESSION["name"];
+                }else{
+                  echo "Inicie Sesion";
+                }
+                ?>
+                <a href="#"><img src="../img/user-solid.svg" data-bs-toggle="modal" data-bs-target="#exampleModal" alt=""></a>
+                <a href=""><img src="../img/heart-solid.svg" alt=""></a>
+                <a href=""><img src="../img/basket-shopping-solid.svg" alt=""></a>
+                <a onclick="return ConfirmCloseSesion()" href="../CRUD/controlador_cerrar_sesion.php"><img src="../img/arrow-right-from-bracket-solid.svg" alt=""></a>
             </div>
-
+                
             <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
@@ -34,9 +60,7 @@
                             <button type="button" class="btn-close float-end" data-bs-dismiss="modal" aria-label="Close"></button>
                             <h1 class="title-form">Iniciar Sesión</h1>
                             <div class="form-content">
-                              <?php 
-                              include "controlador.php" 
-                              ?>
+                              
                                 <form action="" method="POST">
                                     <div class="form-inputs">
                                       <p class="text-form">Correo Electronico</p>
@@ -58,7 +82,7 @@
                                     </div>
                                     <div class="form-register">
                                         <p>¿No tienes Cuenta?</p>
-                                        <a href="registro.php">Registrate Aqui</a>
+                                        <a href="../registro/registro.php">Registrate Aqui</a>
                                     </div>
             
                                 </form>
@@ -84,7 +108,7 @@
                         <a class="navbar-brand" href="index.php">Inicio</a>
                       </li>
                       <li class="nav-item">
-                        <a class="navbar-brand" href="nosotros.php">Nosotros</a>
+                        <a class="navbar-brand" href="../nosotros/nosotros.php">Nosotros</a>
                       </li>
                       <li class="nav-item">
                         <a class="navbar-brand" href="#">Anillos</a>
@@ -118,17 +142,17 @@
     <main class="main">
         <div class="contenedor-top">
             <div class="card-top">
-                <img src="img/RIALTO_800x_19dca05d-515e-4048-89eb-e8d83f322bec.webp" alt="">
+                <img src="../img/RIALTO_800x_19dca05d-515e-4048-89eb-e8d83f322bec.webp" alt="">
                 <p id="diamante">Diamantes de Laboratorio</p>
                 <a href="">Conocer</a>
             </div>
             <div class="card-top">
-                <img src="img/Captura_de_Pantalla_2022-07-14_a_la_s_11.59.54.webp" alt="">
+                <img src="../img/Captura_de_Pantalla_2022-07-14_a_la_s_11.59.54.webp" alt="">
                 <p>Todo Joyas</p>
                 <a href="">Ver todo acá</a>
             </div>
             <div class="card-top">
-                <img src="img/PERLAS8MM_89dc3f2c-6b54-4410-b5d2-898b9943ce56.webp" alt="">
+                <img src="../img/PERLAS8MM_89dc3f2c-6b54-4410-b5d2-898b9943ce56.webp" alt="">
                     <p>Para regalar</p>
                     <a href="">Comprar ahora</a>
             </div>
@@ -136,7 +160,7 @@
 
         <div class="contenedor-simbolo">
             <div class="simbolo-img">
-                <img src="img/TEST_EP1_MH_panthere_c_clp_campaign_2023.jpg.scale.1920.high.webp" alt="">
+                <img src="../img/TEST_EP1_MH_panthere_c_clp_campaign_2023.jpg.scale.1920.high.webp" alt="">
             </div>
             <div class="simbolo-text">
                 <h3>Un poderoso simbolo de estilo</h3>
@@ -150,37 +174,37 @@
             <h1>Los servicios exclusivos de Desert Center</h1>
             <div class="contenedor-servicios-box">
                 <div class="servicios-box">
-                    <img src="img/1_reassurance_icon.webp" alt="">
+                    <img src="../img/1_reassurance_icon.webp" alt="">
                     <p>Envío Gratuito</p>
                 </div>
                 <div class="servicios-box">
-                    <img src="img/2_reassurance_icon.webp" alt="">
+                    <img src="../img/2_reassurance_icon.webp" alt="">
                     <p>Devolución y cambio gratuitos</p>
                 </div>
                 <div class="servicios-box">
-                    <img src="img/4_reassurance_icon.webp" alt="">
+                    <img src="../img/4_reassurance_icon.webp" alt="">
                     <p>Contacto</p>
                 </div>
                 <div class="servicios-box">
-                    <img src="img/5_reassurance_icon.webp" alt="">
+                    <img src="../img/5_reassurance_icon.webp" alt="">
                     <p>Personalice su creación</p>
                 </div>
             </div>
         </div>
 
         <div class="img-fade">
-            <img class="w-100" src="img/TEST_MP1_MH_NEL_panthere_c_clp_slide_04.jpg.scale.1600.800.high.webp" alt="">
+            <img class="w-100" src="../img/TEST_MP1_MH_NEL_panthere_c_clp_slide_04.jpg.scale.1600.800.high.webp" alt="">
         </div>
 
         <div class="contenedor-instagram">
             <div class="instagram-images">
-                <img src="img/mujer-modelo-mostrando-anillos-de-plata-con-un-poc-upscaled.png" alt="">
-                <img src="img/mujer-modelo-mostrando-collar-de-plata-upscaled.png" alt="">
-                <img src="img/manos-con-anillos-de-plata-azulados-upscaled.png" alt="">
+                <img src="../img/mujer-modelo-mostrando-anillos-de-plata-con-un-poc-upscaled.png" alt="">
+                <img src="../img/mujer-modelo-mostrando-collar-de-plata-upscaled.png" alt="">
+                <img src="../img/manos-con-anillos-de-plata-azulados-upscaled.png" alt="">
             </div>
             <div class="instagram-text  mx-4 d-flex text-center">
                 <h4 class="p-2">Síguenos en Instagram</h1>
-                <img src="img/instagram.png" class="w-50" alt="">
+                <img src="../img/instagram.png" class="w-50" alt="">
             </div>
         </div>
 
@@ -195,13 +219,13 @@
             <div id="carouselExampleAutoplaying" class="carousel slide carousel-fade d-flex w-100" data-bs-ride="carousel">
                 <div class="carousel-inner">
                   <div class="carousel-item active" data-bs-interval="1500">
-                    <img src="img/imagenes-de-joyeria-de-plata-collares-y-anillos-pa-upscaled (1).png" class="d-flex w-100" alt="...">
+                    <img src="../img/imagenes-de-joyeria-de-plata-collares-y-anillos-pa-upscaled (1).png" class="d-flex w-100" alt="...">
                   </div>
                   <div class="carousel-item" data-bs-interval="2000">
-                    <img src="img/imagenes-de-joyeria-de-plata-collares-y-anillos-pa-upscaled (2).png" class="d-flex w-100" alt="...">
+                    <img src="../img/imagenes-de-joyeria-de-plata-collares-y-anillos-pa-upscaled (2).png" class="d-flex w-100" alt="...">
                   </div>
                   <div class="carousel-item" data-bs-interval="2000">
-                    <img src="img/imagenes-de-joyeria-de-plata-collares-y-anillos-pa-upscaled (3).png" class="d-flex w-100" alt="...">
+                    <img src="../img/imagenes-de-joyeria-de-plata-collares-y-anillos-pa-upscaled (3).png" class="d-flex w-100" alt="...">
                   </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
@@ -285,11 +309,11 @@
             </div>
         </div>
         <div class="copyright">
-            <img src="img/payment.png" alt="">
+            <img src="../img/payment.png" alt="">
             <p>&copy;2023 Doublas Galleguillos</p>
         </div>
     
     </footer>
-    <script src="bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="../bootstrap/js/bootstrap.bundle.js"></script>
 </body>
 </html>

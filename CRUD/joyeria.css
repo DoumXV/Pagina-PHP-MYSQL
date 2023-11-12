@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
-@import url(bootstrap/css/bootstrap.css);
 :root {
   --primary-color: #345576;
   --background-color: #a3a8ab;
@@ -61,18 +60,6 @@ body {
 }
 
 .contenedor-user img {
-  width: 3rem;
-  padding-right: 1rem;
-  justify-content: space-between;
-}
-
-.contenedor-user2 {
-  display: flex;
-  justify-content: left;
-  align-items: start;
-}
-
-.contenedor-user2 img {
   width: 3rem;
   padding-right: 1rem;
   justify-content: space-between;
@@ -328,4 +315,4 @@ body {
 
 .fondos {
   background-color: #345576;
-}/*# sourceMappingURL=actualizar.css.map */
+}/*# sourceMappingURL=joyeria.css.map */

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro</title>
     <link rel="stylesheet" href="register.css">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
 </head>
 
 <body>
@@ -13,35 +14,38 @@
 
         <div class="contenedor-header">
             <div class="soporte-cliente">
-                <img src="img/twitter.svg" alt="">
-                <img src="img/instagram.svg" alt="">
+                <img src="../img/twitter.svg" alt="">
+                <img src="../img/instagram.svg" alt="">
             </div>
             <div class="contenedor-logo">
-                <img src="img/bangladeshi-taka-sign-solid.svg" alt="">
+                <img src="../img/bangladeshi-taka-sign-solid.svg" alt="">
                 <h1 class="fw-bolder"><a href="#">esert</a></h1>
             </div>
             <div class="contenedor-user">
-                <a href="#"><img src="img/user-solid.svg" data-bs-toggle="modal" data-bs-target="#exampleModal" alt=""></a>
-                <a href=""><img src="img/heart-solid.svg" alt=""></a>
-                <a href=""><img src="img/basket-shopping-solid.svg" alt=""></a>
+                <a href="#"><img src="../img/user-solid.svg" data-bs-toggle="modal" data-bs-target="#exampleModal" alt=""></a>
+                <a href=""><img src="../img/heart-solid.svg" alt=""></a>
+                <a href=""><img src="../img/basket-shopping-solid.svg" alt=""></a>
             </div>
 
-            <!-- Modal -->
+              <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
             <div class="modal-content">
-                <div class="modal-body">
+                <div class="modal-body text-black">
                     <section class="container-login">
                         <div class="form">
                             <button type="button" class="btn-close float-end" data-bs-dismiss="modal" aria-label="Close"></button>
                             <h1 class="title-form">Iniciar Sesión</h1>
                             <div class="form-content">
-                                <form>
+                              <?php 
+                                include "../CRUD/controlador.php" 
+                              ?>
+                                <form action="" method="POST">
                                     <div class="form-inputs">
-                                        <p class="text-form">Correo Electronico</p>
-                                        <input type="email">
-                                        <p class="text-form">Contraseña</p>
-                                        <input type="password">
+                                      <p class="text-form">Correo Electronico</p>
+                                      <input type="email" name="email">
+                                      <p class="text-form">Contraseña</p>
+                                      <input type="password" name="password">
                                     </div>
                                     <div class="form-options">
                                         <div class="remember-me">
@@ -53,11 +57,11 @@
                                         </div>
                                     </div>
                                     <div class="form-button">
-                                        <button>Iniciar Sesión</button>
+                                        <input type="submit" class="btn btn-primary" name="btniniciar" value="Iniciar Sesion">
                                     </div>
                                     <div class="form-register">
                                         <p>¿No tienes Cuenta?</p>
-                                        <a href="registro.php">Registrate Aqui</a>
+                                        <a href="../registro/registro.php">Registrate Aqui</a>
                                     </div>
             
                                 </form>
@@ -116,81 +120,51 @@
     <main>
         <div class="container-form">
             <h1 class="title-form">Registro</h1>
-            <form class=".form">
+            <form class=".form" action="../CRUD/insertar.php" method="POST" id="registroForm">
                 <div class="treatment">
                     <label for="treatment">Tratamiento *</label>
-                    <select id="treatment">
+                    <select id="treatment" type="text" class="form-control mb-3" name="treatment">
                         <option selected>Sra.</option>
-                        <option value="1">Sr.</option>
-                        <option value="2">Otro</option>
-                        <option value="3">Prefiero No Especificarlo</option>
+                        <option value="Sr.">Sr.</option>
+                        <option value="Otro">Otro</option>
+                        <option value="">Prefiero No Especificarlo</option>
                     </select>
                 </div>
 
                 <div class="name">
                     <label for="">Nombres *</label>
-                    <input type="text">
+                    <input type="text" class="form-control mb-3" name="name">
                 </div>
                 <div class="last-name">
                     <label for="">Apellidos *</label>
-                    <input type="text">
+                    <input type="text" class="form-control mb-3" name="lastname">
                 </div>
                 <div class="user">
                     <label for="">Usuario *</label>
-                    <input type="text">
+                    <input type="text" class="form-control mb-3" name="user">
                 </div>
                 <div class="password">
                     <label for="">Contraseña *</label>
-                    <input type="password">
+                    <input type="password" class="form-control mb-3" name="password">
                 </div>
                 <div class="email">
                     <label for="">Email *</label>
-                    <input type="email">
+                    <input type="email" class="form-control mb-3" name="email">
                 </div>
                 <div class="adress">
                     <label for="">Direccion *</label>
-                    <input type="text">
+                    <input type="text" class="form-control mb-3" name="adress">
                 </div>
                 <div class="birthday">
                     <label for="">Fecha de Nacimiento *</label>
-                    <input type="date">
-                </div>
-                <p id="text-intereses">Por favor, seleccione uno o más intereses</p>
-
-                <div class="container-intereses">
-                    <div class="container-fila">
-                        <div class="container-checkbox">
-                            <input type="checkbox" value="" id="joyas">
-                            <input type="checkbox" value="" id="relojes">
-                            <input type="checkbox" value="" id="bolsos">
-                        </div>
-                        <div class="container-label">
-                            <label for="joyas">Joyas</label>
-                            <label for="relojes">Relojes</label>
-                            <label for="bolsos">Bolsos</label>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="container-fila">
-                            <div class="container-checkbox">
-                                <input type="checkbox" value="" id="perfume">
-                                <input type="checkbox" value="" id="hoteles">
-                                <input type="checkbox" value="" id="todos">
-                            </div>
-                            <div class="container-label">
-                                <label for="perfume">Perfumes</label>
-                                <label for="hoteles">Hoteles</label>
-                                <label for="todos">Todos</label>
-                            </div>
-                        </div>
-                    </div>
+                    <input type="date" class="form-control mb-3" name="birthday">
                 </div>
 
                 <div class="container-condiciones">
-                    <input type="checkbox" value="" id="todos">
+                    <input type="checkbox" value="" id="chkCondiciones" name="politica">
                     <p>
-                        Tras haber leido y entendido la
-                        <a href="#">Politica de privacidad</a>
+                        Tras haber leído y entendido la
+                        <a href="#">Política de privacidad</a>
                         declaro ser una persona mayor de 16 años
                     </p>
                 </div>
@@ -223,12 +197,26 @@
             </div>
         </div>
         <div class="copyright">
-            <img src="img/payment.png" alt="">
+            <img src="../img/payment.png" alt="">
             <p>&copy;2023 Doublas Galleguillos</p>
         </div>
     
     </footer>
-    <script src="bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="../bootstrap/js/bootstrap.bundle.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var chkCondiciones = document.getElementById('chkCondiciones');
+            var formulario = document.getElementById('registroForm');
+
+            formulario.addEventListener('submit', function (event) {
+                if (!chkCondiciones.checked) {
+                    alert('Debes aceptar las condiciones para registrarte.');
+                    event.preventDefault(); // Evita que el formulario se envíe
+                }
+            });
+        });
+    </script>
+
 </body>
 
 </html>

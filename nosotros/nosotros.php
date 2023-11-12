@@ -5,41 +5,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nosotros</title>
     <link rel="stylesheet" href="nosotrosbs.css">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
 </head>
+<script type="text/javascript">
+  function ConfirmCloseSesion()
+  {
+    var respuesta = confirm("Estas seguro que desea Cerrar Sesión?");
+    if(respuesta==true)
+    {
+      return true
+    }else{
+      return false
+    }
+  }
+</script>
 <body>
     <header>
-
+      <?php 
+        include "../CRUD/conexion_nueva.php";
+        include "../CRUD/controlador.php";
+      ?>
         <div class="contenedor-header">
             <div class="soporte-cliente">
-                <img src="img/twitter.svg" alt="">
-                <img src="img/instagram.svg" alt="">
+                <img src="../img/twitter.svg" alt="">
+                <img src="../img/instagram.svg" alt="">
             </div>
             <div class="contenedor-logo">
-                <img src="img/bangladeshi-taka-sign-solid.svg" alt="">
+                <img src="../img/bangladeshi-taka-sign-solid.svg" alt="">
                 <h1 class="fw-bolder"><a href="#">esert</a></h1>
             </div>
             <div class="contenedor-user">
-                <a href="#"><img src="img/user-solid.svg" data-bs-toggle="modal" data-bs-target="#exampleModal" alt=""></a>
-                <a href=""><img src="img/heart-solid.svg" alt=""></a>
-                <a href=""><img src="img/basket-shopping-solid.svg" alt=""></a>
+                <?php
+                  if(!empty($_SESSION["id"])){
+                    echo $_SESSION["name"];
+                  }else{
+                    echo "Inicie Sesion";
+                  }
+                ?>
+                <a href="#"><img src="../img/user-solid.svg" data-bs-toggle="modal" data-bs-target="#exampleModal" alt=""></a>
+                <a href=""><img src="../img/heart-solid.svg" alt=""></a>
+                <a href=""><img src="../img/basket-shopping-solid.svg" alt=""></a>
+                <a onclick="return ConfirmCloseSesion()" href="../CRUD/controlador_cerrar_sesion.php"><img src="../img/arrow-right-from-bracket-solid.svg" alt=""></a>
             </div>
 
-            <!-- Modal -->
+              <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
             <div class="modal-content">
-                <div class="modal-body">
+                <div class="modal-body text-black">
                     <section class="container-login">
                         <div class="form">
                             <button type="button" class="btn-close float-end" data-bs-dismiss="modal" aria-label="Close"></button>
                             <h1 class="title-form">Iniciar Sesión</h1>
                             <div class="form-content">
-                                <form>
+                              <?php 
+                                include "../CRUD/controlador.php" 
+                              ?>
+                                <form action="" method="POST">
                                     <div class="form-inputs">
-                                        <p class="text-form">Correo Electronico</p>
-                                        <input type="email">
-                                        <p class="text-form">Contraseña</p>
-                                        <input type="password">
+                                      <p class="text-form">Correo Electronico</p>
+                                      <input type="email" name="email">
+                                      <p class="text-form">Contraseña</p>
+                                      <input type="password" name="password">
                                     </div>
                                     <div class="form-options">
                                         <div class="remember-me">
@@ -51,11 +78,11 @@
                                         </div>
                                     </div>
                                     <div class="form-button">
-                                        <button>Iniciar Sesión</button>
+                                        <input type="submit" class="btn btn-primary" name="btniniciar" value="Iniciar Sesion">
                                     </div>
                                     <div class="form-register">
                                         <p>¿No tienes Cuenta?</p>
-                                        <a href="registro.php">Registrate Aqui</a>
+                                        <a href="../registro/registro.php">Registrate Aqui</a>
                                     </div>
             
                                 </form>
@@ -78,7 +105,7 @@
                   <div class="collapse navbar-collapse align-items-center " id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto pb-md-2">
                       <li class="nav-item">
-                        <a class="navbar-brand" href="index.php">Inicio</a>
+                        <a class="navbar-brand" href="../index/index.php">Inicio</a>
                       </li>
                       <li class="nav-item">
                         <a class="navbar-brand" href="nosotros.php">Nosotros</a>
@@ -120,15 +147,15 @@
                 la pasión por el arte y la artesanía con un profundo amor por la belleza atemporal. Fundada por apasionados joyeros hace más de una década,
                 nuestra empresa ha evolucionado para convertirse en un referente en el mundo de la joyería. Cada pieza que creamos es el resultado de una meticulosa atención al detalle,
                 una profunda comprensión de las tendencias actuales y una dedicación inquebrantable a la calidad.</p>
-                <img src="img/sello-de-seguridad-para-empresa-de-joyeria-upscaled.png" alt="sello">
+                <img src="../img/sello-de-seguridad-para-empresa-de-joyeria-upscaled.png" alt="sello">
             </div>
             <div class="content-images">
                 <div class="image-nosotros">
-                    <img src="img/joyas-en-un-fondo-color-plata-gris-con-tonos-azule-upscaled (1).png" alt="">
+                    <img src="../img/joyas-en-un-fondo-color-plata-gris-con-tonos-azule-upscaled (1).png" alt="">
                     <p>Las joyas son una expresión de artesanía y estilo. Cada eslabón está hábilmente tejido a mano con plata de ley 925.</p>
                 </div>
                 <div class="image-nosotros">
-                    <img src="img/joyas-en-un-fondo-color-plata-gris-con-tonos-azule-upscaled.png" alt="">
+                    <img src="../img/joyas-en-un-fondo-color-plata-gris-con-tonos-azule-upscaled.png" alt="">
                     <p>Este brazalete es una pieza de joyería excepcional que irradia elegancia y lujo.</p>
                 </div>
             </div>
@@ -136,19 +163,19 @@
 
         <div class="container-equipo">
             <div class="image-equipo">
-                <img src="img/foto-individual-para-foto-de-perfil-de-equipo-de-p-upscaled (1).png" alt="">
+                <img src="../img/foto-individual-para-foto-de-perfil-de-equipo-de-p-upscaled (1).png" alt="">
                 <p>Lider Consejo Directivo</p>
             </div>
             <div class="image-equipo">
-                <img src="img/foto-individual-para-foto-de-perfil-de-equipo-de-p-upscaled.png" alt="">
+                <img src="../img/foto-individual-para-foto-de-perfil-de-equipo-de-p-upscaled.png" alt="">
                 <p>CEO</p>
             </div>
             <div class="image-equipo">
-                <img src="img/foto-individual-para-foto-de-perfil-de-equipo-de-p-upscaled (3).png" alt="">
+                <img src="../img/foto-individual-para-foto-de-perfil-de-equipo-de-p-upscaled (3).png" alt="">
                 <p>Community Manager</p>
             </div>
             <div class="image-equipo">
-                <img src="img/foto-individual-para-foto-de-perfil-de-equipo-de-p-upscaled (2).png" alt="">
+                <img src="../img/foto-individual-para-foto-de-perfil-de-equipo-de-p-upscaled (2).png" alt="">
                 <p>Director Marketing</p>
             </div>
         </div>
@@ -164,13 +191,13 @@
                 <div id="carouselExampleAutoplaying" class="carousel slide carousel-fade d-flex w-100 h-100" data-bs-ride="carousel">
                     <div class="carousel-inner mt-3">
                       <div class="carousel-item active" data-bs-interval="1500">
-                        <img src="img/imagenes-de-joyeria-de-plata-collares-y-anillos-pa-upscaled (1).png" class="d-flex img-fluid h-25 border-4" alt="...">
+                        <img src="../img/imagenes-de-joyeria-de-plata-collares-y-anillos-pa-upscaled (1).png" class="d-flex img-fluid h-25 border-4" alt="...">
                       </div>
                       <div class="carousel-item" data-bs-interval="2000">
-                        <img src="img/imagenes-de-joyeria-de-plata-collares-y-anillos-pa-upscaled (2).png" class="d-flex w-100" alt="...">
+                        <img src="../img/imagenes-de-joyeria-de-plata-collares-y-anillos-pa-upscaled (2).png" class="d-flex w-100" alt="...">
                       </div>
                       <div class="carousel-item" data-bs-interval="2000">
-                        <img src="img/imagenes-de-joyeria-de-plata-collares-y-anillos-pa-upscaled (3).png" class="d-flex w-100" alt="...">
+                        <img src="../img/imagenes-de-joyeria-de-plata-collares-y-anillos-pa-upscaled (3).png" class="d-flex w-100" alt="...">
                       </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
@@ -215,19 +242,19 @@
 
         <div class="container-boxes">
             <div class="box">
-                <img src="img/21.jpg" alt="">
+                <img src="../img/21.jpg" alt="">
             </div>
             <div class="box">
-                <img src="img/22.jpg" alt="">
+                <img src="../img/22.jpg" alt="">
             </div>
             <div class="box">
-                <img src="img/23.jpg" alt="">
+                <img src="../img/23.jpg" alt="">
             </div>
             <div class="box">
-                <img src="img/24.jpg" alt="">
+                <img src="../img/24.jpg" alt="">
             </div>
             <div class="box">
-                <img src="img/25.jpg" alt="">
+                <img src="../img/25.jpg" alt="">
             </div>
         </div>
     </main>
@@ -254,12 +281,12 @@
             </div>
         </div>
         <div class="copyright">
-            <img src="img/payment.png" alt="">
+            <img src="../img/payment.png" alt="">
             <p>&copy;2023 Doublas Galleguillos</p>
         </div>
     
     </footer>
-    <script src="bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="../bootstrap/js/bootstrap.bundle.js"></script>
     
 </body>
 </html>

@@ -1,12 +1,7 @@
 <?php
-
-    include("conexion.php");
-    $con=conectar();
-
-    $sql = "SELECT * FROM users";
-    $query = mysqli_query($con,$sql);
-
-    $row = mysqli_fetch_array($query);
+    include("conexion_nueva.php");
+    $row=$conexion->query("SELECT * FROM usuarios");
+    session_start();
 ?>
 
 <!DOCTYPE html>
@@ -16,20 +11,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CRUD ADMIN</title>
     <link rel="stylesheet" href="joyeria.css">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
 </head>
 <body>
 <header>
         <div class="contenedor-header">
             <div class="soporte-cliente">
-                <img src="img/twitter.svg" alt="">
-                <img src="img/instagram.svg" alt="">
+                <img src="../img/twitter.svg" alt="">
+                <img src="../img/instagram.svg" alt="">
             </div>
             <div class="contenedor-logo me-5">
-                <img src="img/bangladeshi-taka-sign-solid.svg" alt="">
+                <img src="../img/bangladeshi-taka-sign-solid.svg" alt="">
                 <h1 class="fw-bolder"><a href="#">Admin</a></h1>
             </div>
             <div class="contenedor-user">
-                <a href="index.php"><img src="img/arrow-right-from-bracket-solid.svg" alt=""></a>
+                <?php
+                    if(!empty($_SESSION["id"])){
+                        echo $_SESSION["name"];
+                    }else{
+                        echo "Inicie Sesion";
+                    }
+                    ?>
+                <a href="../index/index.php"><img src="../img/arrow-right-from-bracket-solid.svg" alt=""></a>
             </div>
 
         
@@ -113,51 +116,68 @@
             <div class="col-md-3">
                 <h1>Ingreso de Datos</h1>
                 <form action="insertar.php" method="POST">
+                    <div class="treatment">>
+                        <select id="treatment" type="text" class="form-control mb-3" name="treatment">
+                            <option selected>Sra.</option>
+                            <option>Sr.</option>
+                            <option value="">Otro</option>
+                            <option value="">Prefiero No Especificarlo</option>
+                        </select>
+                    </div>
                     <input type="text" class="form-control mb-3" name="id" placeholder="ID">
                     <input type="text" class="form-control mb-3" name="name" placeholder="Nombre">
                     <input type="text" class="form-control mb-3" name="lastname" placeholder="Apellido">
                     <input type="text" class="form-control mb-3" name="user" placeholder="Usuario">
                     <input type="text" class="form-control mb-3" name="email" placeholder="Email">
                     <input type="text" class="form-control mb-3" name="password" placeholder="Contraseña">
+                    <input type="text" class="form-control mb-3" name="adress" placeholder="Direccion">
+                    <label for="birthday" class=" form-control mb-3">Fecha de Nacimiento</label>
+                    <input type="date" class="form-control mb-3" name="birthday" placeholder="Fecha de Nacimiento">
 
                     <input type="submit" class="btn btn-primary">
                 </form>
             </div>
-            <div class="col-md-8 mx-auto justify-content-center align-items-center text-center">
+            <div class="col-md-9 mx-auto justify-content-center align-items-center text-center">
                 <h1 class="">Informacion</h1>
-                <form class="d-flex mb-4 ms-5 container-fluid" role="search">
+                <form class="d-flex mb-4 container-fluid" role="search">
                       <input class="form-control me-2" type="search" placeholder="Plata 985..." aria-label="Search">
                       <button class="btn btn-primary ms-5" type="submit">Buscar</button>
                     </form>
-                <table class="table ms-5">
+                <table class="table">
                     <thead class="head-tabla table-striped">
                         <tr>
                             <th class="fondos">ID</th>
+                            <th>Tratamiento</th>
                             <th>Nombre</th>
                             <th>Apellido</th>
                             <th>Usuario</th>
                             <th>Email</th>
                             <th>Contraseña</th>
+                            <th>Direccion</th>
+                            <th>Fecha de Nacimiento</th>
                             <th></th>
                             <th></th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php
-                            while($row=mysqli_fetch_array($query)){
+                        while ($sql = $row->fetch_object()) {
                         ?>
                             <tr>
-                                <th> <?php echo $row['id']?></th>
-                                <th> <?php echo $row['name']?></th>
-                                <th> <?php echo $row['lastname']?></th>
-                                <th> <?php echo $row['user']?></th>
-                                <th> <?php echo $row['email']?></th>
-                                <th> <?php echo $row['password']?></th>
-                                <th><a href="actualizar.php?id=<?php echo $row['id'] ?>" class="btn btn-outline-secondary">Modificar</a></th>
-                                <th><a href="eliminar.php?id=<?php echo $row['id'] ?>" class="btn btn-danger">Eliminar</a></th>
+                                <th><?php echo $sql->id ?></th>
+                                <th><?php echo $sql->treatment ?></th>
+                                <th><?php echo $sql->name ?></th>
+                                <th><?php echo $sql->lastname ?></th>
+                                <th><?php echo $sql->user ?></th>
+                                <th><?php echo $sql->email ?></th>
+                                <th><?php echo $sql->password ?></th>
+                                <th><?php echo $sql->adress ?></th>
+                                <th><?php echo $sql->birthday ?></th>
+                                <th><a href="actualizar.php?id=<?php echo $sql->id ?>" class="btn btn-outline-secondary">Modificar</a></th>
+                                <th><a href="eliminar.php?id=<?php echo $sql->id ?>" class="btn btn-danger">Eliminar</a></th>
                             </tr>
-                        <?php 
-                            }
+                        <?php
+                        }
                         ?>
                     </tbody>
 
@@ -216,11 +236,11 @@
             </div>
         </div>
         <div class="copyright">
-            <img src="img/payment.png" alt="">
+            <img src="../img/payment.png" alt="">
             <p>&copy;2023 Doublas Galleguillos</p>
         </div>
     
     </footer>
-    <script src="bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="../bootstrap/js/bootstrap.bundle.js"></script>
 </body>
 </html>
